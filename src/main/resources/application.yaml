@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    username: root
+    password: rootjy
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    filters: stat,wall,slf4j
+  thymeleaf:
+    cache: false
+#  redis:
+#    host: 192.168.47.129
+#    password: 123456
+#  rabbitmq:
+#    host: 192.168.47.129
+#    port: 5672
+#    username: guest
+#    password: guest
+#  mail:
+#    username: 154694103@qq.com
+#    password: dfgrqhpvkqotcade
+#    host: smtp.qq.com
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            enable: true
+
+
+
+mybatis:
+  mapperLocations:
+    - classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+debug: false
+server:
+  port: 8081
